@@ -101,8 +101,8 @@ legend_elements = [	Rectangle((0,0), 0, 0, color='none', label = 'Stochastic sim
 	Line2D([0], [0], color = limicol, lw=2, label='Proportion of infected'),
 	Rectangle((0,0), 0, 0, color='none', label = ''),
 	Rectangle((0,0), 0, 0, color='none', label = 'EBCM'),
-	Line2D([0], [0], color = ebcmscol, linestyle = 'dotted', lw=2, label='Proportion of susceptibles'),
-	Line2D([0], [0], color = ebcmicol, linestyle = 'dotted', lw=2, label='Proportion of infected')]
+	Line2D([0], [0], color = ebcmscol, linestyle = 'dashed', lw=2, label='Proportion of susceptibles'),
+	Line2D([0], [0], color = ebcmicol, linestyle = 'dashed', lw=2, label='Proportion of infected')]
 
 leg = axs[1,1].legend(handles=legend_elements, mode = 'expand', loc='center left')
 leg.get_texts()[0].set_weight('bold')
