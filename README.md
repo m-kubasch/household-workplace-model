@@ -38,8 +38,9 @@ It contains both the code developed for this project, as well as the simulated d
 
 3. **Suggested default parameters** required to be specified in the command line : 
 
- K | betaG | lambdaH | lambdaW | gamma | eps | tstop | threshold | job\_id | array\_nb 
- 10000 | 0.085 | 0.1 | 0.001 | 0.125 | 0.01 | 150 | 0.01 | 0 | 0 
+| K | betaG | lambdaH | lambdaW | gamma | eps | tstop | threshold | job\_id | array\_nb |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 10000 | 0.085 | 0.1 | 0.001 | 0.125 | 0.01 | 150 | 0.01 | 0 | 0 |
 
 ### *article-data*
 
