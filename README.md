@@ -7,7 +7,7 @@ The content of this repository is associated to the preprint "Large population l
 
 It contains both the code developed for this project, as well as the simulated data allowing to reproduce the results. 
 
-
+*Dependencies* : Python 3, os, sys, time, math, collections, scipy, numpy, matplotlib.
 
 ## Contents
 
@@ -25,13 +25,21 @@ It contains both the code developed for this project, as well as the simulated d
 
 2. **Mains:** the following scripts give examples of how to use these modules.
 
-	- `main-simu.py`: simulation of one epidemic trajectory given by the stochastic ABM. The output is only saved if the proportion of infected reaches at least 0.5%, otherwise the trajectroy is discarded (this can be changed by using the *threshold* parameter of `ioput.save_simulation`). The script is designed to be launched using the command line.
+	- `main-simu.py`: simulation of one epidemic trajectory given by the stochastic ABM. The output is only saved if the proportion of infected reaches at least 0.5%, otherwise the trajectroy is discarded (this can be changed by using the *threshold* parameter of `ioput.save_simulation`). The script is designed to be launched using the command line, e.g. 
+	```
+	python3 main-simu.py 10000 0.085 0.1 0.001 0.125 0.01 150 0 0
+	```
 	- `main-reduction.py`: numerical solution of the dynamic system arising as the large population limit of the stochastic model, for all parameter sets considered in the article.
 	- `main-ebcm.py`: numerical solution of the EBCM. The script is designed to be launched using the command line.
 	- `main-ctime.py`: script allowing to time the execution of either one simulation of the stochastic ABM, or the numerical solution of either of the two dynamical systems (large population limit, EBCM).
 	- `main-simu-initialcdt.py`: simulation of an epidemic trajectory of the ABM starting from a single infected, up to the point when the proportion of infected reaches a given threshold. If this point is reached, the observed state of the variables of the large population limit is saved. The script is designed to be launched using the command line.
 	- `main-infere-initialcdt.py`: numerical solution of the large population limit dynamical system, using an initial condition infered from simulation data.
 	- `main-figure2.py`, `main-figure3.py`, `main-figureA1.py`, `main-figureA2.py`, `main-figureSM1.py`, `main-tableSM2.py`: scripts allowing to reproduce the corresponding figures and table of the article. 
+
+3. **Suggested default parameters** required to be specified in the command line : 
+
+| K | betaG | lambdaH | lambdaW | gamma | eps | tstop | threshold | job\_id | array\_nb |
+| 10000 | 0.085 | 0.1 | 0.001 | 0.125 | 0.01 | 150 | 0.01 | 0 | 0 |
 
 ### *article-data*
 
